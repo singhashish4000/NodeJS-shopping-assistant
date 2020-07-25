@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form action="/assist">
+      <label for="productOne">Main Coarse:</label><br>
+      <input type="text" id="productOne" name="productOne" value=""><br><br>
+      <label for="productTwo">Dessert:</label><br>
+      <input type="text" id="productTwo" name="productTwo" value=""><br><br>
+      <input type="submit" value="Search">
+    </form> 
+  </body>
+</html>
