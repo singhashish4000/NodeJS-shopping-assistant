@@ -82,14 +82,14 @@ mongosse.connect(config.database, async (err) => {
       storeRecord3 = await Store.findOne({name: 'Store3'});
       await StoreItem.create({item: itemRecord3, store: storeRecord3, price: 21, rating: 4});
 
-      let itemRecord1 = await Item.findOne({name: 'Item1'});
-      let itemRecord2 = await Item.findOne({name: 'Item2'});
-      let itemRecord3 = await Item.findOne({name: 'Item3'});
+      let itemRecord11 = await Item.findOne({name: 'Item1'});
+      let itemRecord22 = await Item.findOne({name: 'Item2'});
+      let itemRecord33 = await Item.findOne({name: 'Item3'});
 
       // OrderProducts
-      orderProduct1 = await new OrderProduct({item: itemRecord1, quantity: 1, subtotal: 50})
-      orderProduct2 = await new OrderProduct({item: itemRecord2, quantity: 2, subtotal: 100})
-      orderProduct3 = await new OrderProduct({item: itemRecord3, quantity: 3, subtotal: 70})
+      orderProduct1 = await new OrderProduct({item: itemRecord11, quantity: 1, subtotal: 50})
+      orderProduct2 = await new OrderProduct({item: itemRecord22, quantity: 2, subtotal: 100})
+      orderProduct3 = await new OrderProduct({item: itemRecord33, quantity: 3, subtotal: 70})
 
       OrderProduct.collection.insert([orderProduct1,orderProduct2,orderProduct3])
       .then(async (data)=>{
