@@ -25,7 +25,7 @@ router.get('/', async function(req, res, next) {
     likeOne = await User.findOne({name: 'Niel'}).populate({path: 'orders',populate: {path: 'orderProduct', model: 'OrderProduct',populate:{path: 'item', model: 'Item'}}});
     likeTwo = await User.findOne({name: 'Niel'}).populate({path: 'orders',populate: {path: 'orderProduct', model: 'OrderProduct',populate:{path: 'item', model: 'Item'}}})
   } catch (error) {
-    console.error(error)
+    console.log(error)
   }
   itemOneIds = itemOne.map(record => record._id);
   itemTwoIds = itemTwo.map(record => record._id);
