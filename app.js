@@ -54,7 +54,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(config.port, err => {
+app.listen(app.port, err => {
   console.log(`Server running on ${config.port}`)
 });
 
